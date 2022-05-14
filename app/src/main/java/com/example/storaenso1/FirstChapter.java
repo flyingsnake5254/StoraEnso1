@@ -122,7 +122,11 @@ public class FirstChapter extends AppCompatActivity {
                                 }
                             }
                             else{
+                                if(count == 7){
+
+                                }
                                 tMessage.setText(messages[count++]);
+
                             }
                         }
                     });
