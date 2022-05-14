@@ -66,7 +66,9 @@ public class HouseDoorFront extends AppCompatActivity {
         });
     }
     ImageView key;
+    LinearLayout door;
     public void init(){
+        door = (LinearLayout) findViewById(R.id.HouseFrontDoor);
         key = (ImageView) findViewById(R.id.HouseDoorKey);
         confirmPassword = (Button) findViewById(R.id.confirmPassword);
         passwordPadel = (LinearLayout) findViewById(R.id.passwordPadel);
@@ -77,6 +79,20 @@ public class HouseDoorFront extends AppCompatActivity {
         bagArrow = (ImageView) findViewById(R.id.HouseDoorArrow);
         hold = (ImageView)findViewById(R.id.HouseDoorHold);
         leftArrow = (ImageView) findViewById(R.id.HouseDoorLeft);
+
+        door.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(itemCanClick){
+                    if(holdItem.equals("key")){
+                        Intent intent = new Intent(HouseDoorFront.this , InnerHouse1.class);
+                        startActivity(intent);
+                        overridePendingTransition(R.anim.fade_in , R.anim.fade_out);
+                        finish();
+                    }
+                }
+            }
+        });
 
         confirmPassword.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -157,7 +173,7 @@ public class HouseDoorFront extends AppCompatActivity {
             public boolean onLongClick(View view) {
                 if(holdItem.equals("key")){
                     holdItem = "";
-                    table1.setBackgroundColor(Color.parseColor("#00000000"));
+                    key.setBackgroundColor(Color.parseColor("#00000000"));
                     Toast.makeText(HouseDoorFront.this , "取消持有" ,Toast.LENGTH_SHORT).show();
                     hold.setImageResource(0);
                 }
