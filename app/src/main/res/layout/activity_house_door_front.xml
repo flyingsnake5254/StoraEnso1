@@ -169,23 +169,30 @@
                     android:layout_weight="1"
                     android:inputType="number"
                     android:gravity="center"
+                    android:maxLength="1"
+                    android:id="@+id/password1"
                     android:layout_margin="10dp">
 
                 </EditText>
                 <EditText
+                    android:maxLength="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
+                    android:id="@+id/password2"
                     android:inputType="number"
                     android:layout_margin="10dp">
 
                 </EditText>
                 <EditText
+
+                    android:maxLength="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
+                    android:id="@+id/password3"
                     android:inputType="number"
                     android:layout_margin="10dp">
 
@@ -195,6 +202,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:inputType="number"
+                    android:id="@+id/password4"
                     android:gravity="center"
                     android:layout_margin="10dp">
 

@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -26,7 +27,7 @@ public class HouseDoorFront extends AppCompatActivity {
     // hold state
     String holdItem = "";
     RelativeLayout mailBox;
-    Button button;
+    Button confirmPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +66,7 @@ public class HouseDoorFront extends AppCompatActivity {
     ImageView key;
     public void init(){
         key = (ImageView) findViewById(R.id.HouseDoorKey);
-        button = (Button) findViewById(R.id.confirmPassword);
+        confirmPassword = (Button) findViewById(R.id.confirmPassword);
         passwordPadel = (LinearLayout) findViewById(R.id.passwordPadel);
         exitPassword = (ImageView) findViewById(R.id.exitPassword);
         mailBox = (RelativeLayout) findViewById(R.id.MailBox);
@@ -75,25 +76,36 @@ public class HouseDoorFront extends AppCompatActivity {
         hold = (ImageView)findViewById(R.id.HouseDoorHold);
         leftArrow = (ImageView) findViewById(R.id.HouseDoorLeft);
 
-        button.setOnClickListener(new View.OnClickListener() {
+        confirmPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mailBoxHasOpen = true;
-                itemCanClick = false;
-                RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.treeHouseConversation);
-                LinearLayout layout = (LinearLayout) getLayoutInflater().inflate(R.layout.conversation , null);
-                TextView tMessage = (TextView) layout.findViewById(R.id.tConversation);
-                tMessage.setText("信箱打開了!\n獲得一把鑰匙");
-                relativeLayout.addView(layout);
-                ImageButton button = (ImageButton) layout.findViewById(R.id.bTap);
-                button.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        key.setVisibility(View.VISIBLE);
-                        itemCanClick = true;
-                        relativeLayout.removeAllViews();
-                    }
-                });
+                EditText e1 , e2 , e3 ,e4;
+                e1 = (EditText) findViewById(R.id.password1);
+                e2 = (EditText) findViewById(R.id.password2);
+                e3 = (EditText) findViewById(R.id.password3);
+                e4 = (EditText) findViewById(R.id.password4);
+                if(e1.getText().toString().equals("0")
+                        && e2.getText().toString().equals("3")
+                        && e3.getText().toString().equals("1")
+                        && e4.getText().toString().equals("2")){
+                    mailBoxHasOpen = true;
+                    itemCanClick = false;
+                    RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.treeHouseConversation);
+                    LinearLayout layout = (LinearLayout) getLayoutInflater().inflate(R.layout.conversation , null);
+                    TextView tMessage = (TextView) layout.findViewById(R.id.tConversation);
+                    tMessage.setText("信箱打開了!\n獲得一把鑰匙");
+                    relativeLayout.addView(layout);
+                    ImageButton button = (ImageButton) layout.findViewById(R.id.bTap);
+                    button.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            key.setVisibility(View.VISIBLE);
+                            itemCanClick = true;
+                            relativeLayout.removeAllViews();
+                        }
+                    });
+                }
+
             }
         });
 
