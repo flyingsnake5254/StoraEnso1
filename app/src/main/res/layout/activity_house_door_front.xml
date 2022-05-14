@@ -4,107 +4,241 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/house_tree"
-    tools:context=".LongGrassChapter">
+    android:background="@drawable/locking_door"
+    tools:context=".HouseDoorFront">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1.2"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3">
+
+                </RelativeLayout>
+<!--                信箱-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:id="@+id/MailBox"
+                    android:layout_weight="2">
+
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    android:layout_weight="3">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                    </RelativeLayout>
+<!--                    前往梁柱-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/left"
+                            android:id="@+id/HouseDoorLeft"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1.2"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="6"
-            android:orientation="vertical">
-
-        </LinearLayout>
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="5">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="fitXY"
-                android:id="@+id/longGrass"
-                android:src="@drawable/grass" />
+            android:orientation="vertical"
+            android:visibility="invisible"
+            android:id="@+id/passwordPadel"
+            android:layout_margin="10dp"
+            android:background="@drawable/silver"
+            android:layout_weight="1">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-                <LinearLayout
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:orientation="vertical"
-                        android:layout_weight="1">
+                    android:layout_weight="1">
 
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:orientation="vertical"
-                        android:layout_weight="1">
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:orientation="vertical"
-                        android:layout_weight="1">
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/knife"
-                            android:alpha="0.5"
-                            android:rotation="75"
-                            android:id="@+id/knife"/>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-                <LinearLayout
+                </RelativeLayout>
+                <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:layout_weight="5">
 
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-
-                </LinearLayout>
-            </LinearLayout>
-            
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:visibility="invisible"
-                android:scaleType="fitXY"
-                android:id="@+id/shortGrass"
-                android:src="@drawable/cut_grass"/>
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                </RelativeLayout>
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/up1"
-                    android:visibility="invisible"
-                    android:id="@+id/longGrassUp"/>
-            </RelativeLayout>
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/right"
+                    android:id="@+id/exitPassword"
+                    android:layout_weight="1">
 
-        </FrameLayout>
+                </ImageView>
 
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="2">
+                <!--    密碼-->
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:layout_margin="10dp">
+
+                </EditText>
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:layout_margin="10dp">
+
+                </EditText>
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:layout_margin="10dp">
+
+                </EditText>
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:layout_margin="10dp">
+
+                </EditText>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4">
+
+                </RelativeLayout>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:background="#00FF00"
+                    android:layout_margin="10dp"
+                    android:id="@+id/confirmPassword"
+                    android:layout_weight="1">
+
+                </androidx.appcompat.widget.AppCompatButton>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        </RelativeLayout>
 
     </LinearLayout>
 <!--    背包-->
@@ -124,7 +258,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/LongGrassHold"/>
+                    android:id="@+id/HouseDoorHold"/>
 
             </RelativeLayout>
             <RelativeLayout
@@ -137,13 +271,12 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent">
-
                 <ImageView
-                    android:id="@+id/LongGrassBag"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:src="@drawable/bag"
-                    android:visibility="visible" />
+                    android:visibility="visible"
+                    android:id="@+id/HouseDoorBag"/>
 
             </RelativeLayout>
 
@@ -156,16 +289,16 @@
 
         </LinearLayout>
     </LinearLayout>
-<!--    背包背景-->
+    <!--    背包背景-->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="20dp"
         android:background="@drawable/bag_back"
         android:visibility="invisible"
-        android:id="@+id/LongGrassBagBack"
+        android:id="@+id/HouseDoorBagBack"
         android:orientation="vertical">
-<!--        清單-->
+        <!--        清單-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -175,25 +308,26 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:orientation="horizontal">
-<!--                背包一排-->
+                <!--                背包一排-->
                 <ImageView
                     android:layout_margin="10dp"
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:id="@+id/LongGrassBag1"
+                    android:id="@+id/HouseDoorKnife"
                     android:src="@drawable/knife"
+                    android:visibility="visible"
+                    android:layout_height="match_parent">
+
+                </ImageView>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:id="@+id/HouseDoorKey"
+                    android:src="@drawable/key"
                     android:visibility="invisible"
                     android:layout_height="match_parent">
 
-
                 </ImageView>
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:id="@+id/LongGrassBag2"
-                    android:layout_height="match_parent">
-
-                </RelativeLayout>
 
             </LinearLayout>
             <LinearLayout
@@ -201,7 +335,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:orientation="horizontal">
-<!--                背包二排-->
+                <!--                背包二排-->
                 <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -264,7 +398,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-<!--            箭頭-->
+            <!--            箭頭-->
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
@@ -273,18 +407,18 @@
                 android:layout_alignParentRight="true"
                 android:rotationY="180"
                 android:layout_margin="10dp"
-                android:id="@+id/LongGrassArrow"/>
+                android:id="@+id/HouseDoorArrow"/>
         </RelativeLayout>
 
     </FrameLayout>
-<!--對話框-->
+    <!--對話框-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <RelativeLayout
             android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
-            android:id="@+id/treeHouseConversation"
+            android:id="@+id/HouseDoorConversation"
             android:layout_height="wrap_content">
 
         </RelativeLayout>
