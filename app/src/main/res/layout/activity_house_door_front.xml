@@ -332,6 +332,7 @@
                     android:layout_weight="1"
                     android:id="@+id/HouseDoorKey"
                     android:src="@drawable/key"
+                    android:layout_margin="10dp"
                     android:visibility="invisible"
                     android:layout_height="match_parent">
 

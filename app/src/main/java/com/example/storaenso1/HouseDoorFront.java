@@ -40,25 +40,27 @@ public class HouseDoorFront extends AppCompatActivity {
         mailBox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(mailBoxHasOpen){
-                    itemCanClick = false;
-                    RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.treeHouseConversation);
-                    LinearLayout layout = (LinearLayout) getLayoutInflater().inflate(R.layout.conversation , null);
-                    TextView tMessage = (TextView) layout.findViewById(R.id.tConversation);
-                    tMessage.setText("已經打開了");
-                    relativeLayout.addView(layout);
-                    ImageButton button = (ImageButton) layout.findViewById(R.id.bTap);
-                    button.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            itemCanClick = true;
-                            relativeLayout.removeAllViews();
-                        }
-                    });
-                }
-                else{
-                    itemCanClick = false;
-                    passwordPadel.setVisibility(View.VISIBLE);
+                if(itemCanClick){
+                    if(mailBoxHasOpen){
+                        itemCanClick = false;
+                        RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.HouseDoorConversation);
+                        LinearLayout layout = (LinearLayout) getLayoutInflater().inflate(R.layout.conversation , null);
+                        TextView tMessage = (TextView) layout.findViewById(R.id.tConversation);
+                        tMessage.setText("已經打開了");
+                        relativeLayout.addView(layout);
+                        ImageButton button = (ImageButton) layout.findViewById(R.id.bTap);
+                        button.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                itemCanClick = true;
+                                relativeLayout.removeAllViews();
+                            }
+                        });
+                    }
+                    else{
+                        itemCanClick = false;
+                        passwordPadel.setVisibility(View.VISIBLE);
+                    }
                 }
             }
         });
@@ -90,6 +92,7 @@ public class HouseDoorFront extends AppCompatActivity {
                         && e4.getText().toString().equals("2")){
                     mailBoxHasOpen = true;
                     itemCanClick = false;
+                    passwordPadel.setVisibility(View.INVISIBLE);
                     RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.HouseDoorConversation);
                     LinearLayout layout = (LinearLayout) getLayoutInflater().inflate(R.layout.conversation , null);
                     TextView tMessage = (TextView) layout.findViewById(R.id.tConversation);
