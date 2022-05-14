@@ -10,10 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StoraEnso1">
         <activity
-            android:name=".FirstChapter"
+            android:name=".DreamGrandma"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
             android:exported="false" />
+        <activity
+            android:name=".FirstChapter"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
             android:name=".StartAnimation"
             android:exported="true"
@@ -29,7 +34,7 @@
             android:name=".MainActivity"
             android:exported="false"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
     </application>
 
 </manifest>
