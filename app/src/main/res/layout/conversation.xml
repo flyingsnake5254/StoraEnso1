@@ -12,7 +12,7 @@
         android:id="@+id/tConversation"
         android:layout_margin="10dp"
         android:text="sss"
-        android:textSize="10sp"/>
+        android:textSize="20sp"/>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

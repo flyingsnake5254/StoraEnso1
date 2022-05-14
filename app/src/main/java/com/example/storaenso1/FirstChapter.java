@@ -35,7 +35,7 @@ public class FirstChapter extends AppCompatActivity {
                     isConversation = true;
                     hasReadPhoto = true;
                     LinearLayout layout = (LinearLayout) getLayoutInflater().inflate(R.layout.conversation , null);
-                    RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.conversationRelative);
+                    LinearLayout relativeLayout = (LinearLayout) findViewById(R.id.conversationRelative);
                     TextView tMessage = (TextView) layout.findViewById(R.id.tConversation);
                     tMessage.setText("一張老舊的照片，我不想看...");
                     relativeLayout.addView(layout);
@@ -78,7 +78,7 @@ public class FirstChapter extends AppCompatActivity {
                     isConversation = true;
 
                     LinearLayout layout = (LinearLayout) getLayoutInflater().inflate(R.layout.conversation , null);
-                    RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.conversationRelative);
+                    LinearLayout relativeLayout = (LinearLayout) findViewById(R.id.conversationRelative);
                     TextView tMessage = (TextView) layout.findViewById(R.id.tConversation);
                     String[] messages = {
                         "主播：\n" + "長滿繽紛果實的青翠大樹，",
