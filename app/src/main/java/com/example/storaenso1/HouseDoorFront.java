@@ -90,7 +90,7 @@ public class HouseDoorFront extends AppCompatActivity {
                         && e4.getText().toString().equals("2")){
                     mailBoxHasOpen = true;
                     itemCanClick = false;
-                    RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.treeHouseConversation);
+                    RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.HouseDoorConversation);
                     LinearLayout layout = (LinearLayout) getLayoutInflater().inflate(R.layout.conversation , null);
                     TextView tMessage = (TextView) layout.findViewById(R.id.tConversation);
                     tMessage.setText("信箱打開了!\n獲得一把鑰匙");
