@@ -175,7 +175,14 @@ public class InnerHouse1 extends AppCompatActivity {
             public void onClick(View view) {
                 if(itemCanClick){
                     if(!hasRepair){
-                        if(!hasLeg){
+                        if(holdItem.equals("chairLeg")){
+                            Intent intent = new Intent(InnerHouse1.this , InnerHouse2.class);
+                            startActivity(intent);
+                            overridePendingTransition(R.anim.fade_in , R.anim.fade_out);
+                            finish();
+
+                        }
+                        else{
                             itemCanClick = false;
                             RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.InnerHouse1Conversation);
                             LinearLayout layout = (LinearLayout) getLayoutInflater().inflate(R.layout.conversation , null);
@@ -191,13 +198,6 @@ public class InnerHouse1 extends AppCompatActivity {
                                     relativeLayout.removeAllViews();
                                 }
                             });
-                        }
-                        else if(holdItem.equals("chairLeg")){
-                            Intent intent = new Intent(InnerHouse1.this , InnerHouse2.class);
-                            startActivity(intent);
-                            overridePendingTransition(R.anim.fade_in , R.anim.fade_out);
-                            finish();
-
                         }
                     }
                 }

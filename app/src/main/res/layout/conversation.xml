@@ -11,6 +11,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/tConversation"
         android:layout_margin="10dp"
+        android:background="#DDDDDDEE"
+        android:textColor="#003377"
+        android:padding="5dp"
         android:text="sss"
         android:textSize="20sp"/>
     <RelativeLayout
@@ -20,7 +23,7 @@
         <ImageButton
             android:id="@+id/bTap"
             android:layout_width="100dp"
-            android:layout_height="30dp"
+            android:layout_height="50dp"
             android:layout_alignParentRight="true"
             android:scaleType="fitCenter"
             android:src="@drawable/tap" />

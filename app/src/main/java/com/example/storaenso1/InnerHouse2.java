@@ -2,6 +2,7 @@ package com.example.storaenso1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
@@ -19,7 +20,10 @@ public class InnerHouse2 extends AppCompatActivity {
         upArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                System.out.println(" up ");
+                Intent intent = new Intent(InnerHouse2.this , HallWay.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.fade_in , R.anim.fade_out);
+                finish();
             }
         });
     }
