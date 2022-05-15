@@ -11,13 +11,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class DreamGrandma extends AppCompatActivity {
-    /*
-    阿嬤：「還記得你之前種的那棵樹嗎？它已經長得夠大了，可以用來當做木工的材料了。」
 
-「你不是一直想要一個木製的壺嗎？還說要用自己做的壺替樹木澆水，這樣樹也會收到你的心意。」
-
-「記得，植物都是從種子開始，用心灌溉才會成長茁壯…」
-     */
     String[] messages = {
             "(夢境)\n阿嬤：\n" + "還記得你之前種的那棵樹嗎？它已經長得夠大了，可以用來當做木工的材料了。" ,
             "(夢境)\n阿嬤：\n" + "你不是一直想要一個木製的壺嗎？還說要用自己做的壺替樹木澆水，這樣樹也會收到你的心意。" ,
