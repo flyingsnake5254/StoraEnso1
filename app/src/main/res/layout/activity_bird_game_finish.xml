@@ -37,7 +37,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:id="@+id/fruit"
-                    android:visibility="invisible"
+                    android:visibility="visible"
                     android:background="@drawable/fruit"
                     android:layout_weight="1">
 
@@ -123,5 +123,18 @@
 
         </RelativeLayout>
     </LinearLayout>
+
+    <!--對話框-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:id="@+id/HallWayConversation"
+            android:layout_height="wrap_content">
+
+        </RelativeLayout>
+    </RelativeLayout>
 
 </FrameLayout>

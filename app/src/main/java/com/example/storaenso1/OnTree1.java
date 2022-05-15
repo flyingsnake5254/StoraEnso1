@@ -33,14 +33,18 @@ public class OnTree1 extends AppCompatActivity  {
                     v2 = sensorEvent.values[1];
                     v3 = sensorEvent.values[2];
                     if(v1 > 5){
-                        System.out.println("CCCCCCCCCCCCCCCCCCCCCCCCCC");
                         b1.setVisibility(View.INVISIBLE);
                         b1Die = true;
                     }
                     else if((v1 < -5) && b1Die){
-                        sensorManager.unregisterListener((SensorEventListener) this);
+                        //sensorManager.unregisterListener((SensorEventListener) this);
                         b2.setVisibility(View.INVISIBLE);
                         b2Die = true;
+                        Intent intent = new Intent(OnTree1.this , BirdGameFinish.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+//                        overridePendingTransition(R.anim.fade_in , R.anim.fade_out);
+                        startActivity(intent);
+//                        finish();
                     }
 
 
@@ -52,22 +56,20 @@ public class OnTree1 extends AppCompatActivity  {
 
             }
         };
-
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                while(true){
-                    if(b1Die && b2Die){
-                        System.out.println("(((((((((");
-                        Intent intent = new Intent(OnTree1.this , BirdGameFinish.class);
-                        startActivity(intent);
-                        System.out.println("((DDDDDDDDDDDDDDDDDDDDDDDDDDDDDD((");
-                        overridePendingTransition(R.anim.fade_in , R.anim.fade_out);
-                        finish();
-                    }
-                }
-            }
-        }).start();
+//
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                while(true){
+//                    if(b1Die && b2Die){
+//                        Intent intent = new Intent(OnTree1.this , BirdGameFinish.class);
+//                        overridePendingTransition(R.anim.fade_in , R.anim.fade_out);
+//                        startActivity(intent);
+//                        finish();
+//                    }
+//                }
+//            }
+//        }).start();
 
         b1 = (RelativeLayout) findViewById(R.id.bird1);
         b2 = (RelativeLayout) findViewById(R.id.bird2);
@@ -92,7 +94,6 @@ public class OnTree1 extends AppCompatActivity  {
     @Override
     protected void onPause() {
         super.onPause();
-        System.out.println("555555555555555555555555555555");
-        sensorManager.unregisterListener((SensorEventListener) this);
+
     }
 }
